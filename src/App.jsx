@@ -1,12 +1,21 @@
-import React from 'react'
-
-const App = () => {
+import About from './pages/About'
+import Home from './pages/Home'
+import Price from './pages/Price'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+function App () {
   return (
-    <div>
-      <h1>Hello World</h1>
-      <p>This is a paragraph</p>
-      <p>This is another paragraph</p>
-    </div>
+    <>
+      <nav>
+        <h1>Something About Me</h1>
+      </nav>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/price' element={<Price />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
